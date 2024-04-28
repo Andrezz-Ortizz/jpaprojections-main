@@ -1,13 +1,8 @@
-package com.jaax.jpaprojections;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class JpaprojectionsApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
+public class Foo extends TestCase {
+   public void testSomething() {
+      Bar b = findBar();
+   // This is better than having a NullPointerException
+   // assertNotNull("bar not found", b);
+   b.work();
+   }
 }
